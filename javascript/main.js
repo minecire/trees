@@ -6,12 +6,15 @@ var angleSlider = document.getElementById("angle");
 var angleOffsetSlider = document.getElementById("angleOffset");
 var lengthFractionSlider = document.getElementById("lengthFraction");
 var splitNumSlider = document.getElementById("splitNum");
+var baseHeightSlider = document.getElementById("baseHeight");
+var realTimeBox = document.getElementById("realTime");
 
 
 var angle = 0.1;
 var angleOffset = 0;
 var lengthFraction = 0.4;
 var splitNum = 4;
+var baseHeight = 600;
 var timeout = false;
 
 
@@ -61,6 +64,15 @@ splitNumSlider.oninput = function(){
     splitNum = this.value;
     redraw();
 }
+baseHeightSlider.oninput = function(){
+    baseHeight = this.value;
+    redraw();
+}
+
+realTimeBox.oninput = function(){
+    timeout = !timeout;
+    redraw();
+}
 
 function redraw(){
     var id = window.setTimeout(function() {}, 0);
@@ -71,5 +83,5 @@ while (id--) {
     ctx.fillStyle = "#77FFAA";
     ctx.fillRect(0,0,canvas.width,canvas.height);
     ctx.strokeStyle = "#003322";
-    drawTree(canvas.width/2, canvas.height, -Math.PI/2, angleOffset, angle, splitNum, 600, lengthFraction, 3);
+    drawTree(canvas.width/2, canvas.height, -Math.PI/2, angleOffset, angle, splitNum, baseHeight, lengthFraction, 1);
 }

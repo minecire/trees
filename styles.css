@@ -20,6 +20,23 @@ body{
     float:left;
 }
 
+.checkbox {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 90%;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    display:table-cell;
+    float:left;
+
+}
+
+.checkbox:checked{
+    background: #2065c0;
+
+}
+
 p{
     margin: 0px;
     border: 0px;
