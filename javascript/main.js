@@ -10,7 +10,7 @@ var splitNumSlider = document.getElementById("splitNum");
 
 var angle = 0.1;
 var angleOffset = 0;
-var lengthFraction = 0.5;
+var lengthFraction = 0.4;
 var splitNum = 4;
 var timeout = false;
 
@@ -68,7 +68,8 @@ function redraw(){
 while (id--) {
     window.clearTimeout(id);
 }
-    ctx.fillStyle = "#FFFFFF";
+    ctx.fillStyle = "#77FFAA";
     ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.strokeStyle = "#003322";
     drawTree(canvas.width/2, canvas.height, -Math.PI/2, angleOffset, angle, splitNum, 600, lengthFraction, 3);
 }

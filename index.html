@@ -5,10 +5,12 @@
         <title>Trees</title>
     </head> 
     <body oncontextmenu="return false;">
-        <input type="range" min="0" max="628.3" value="10" class="slider" id="angle">
-        <input type="range" min="0" max="628.3" value="10" class="slider" id="angleOffset">
-        <input type="range" min="0" max="1000" value="600" class="slider" id="lengthFraction">
-        <input type="range" min="0" max="10" value="4" class="slider" id="splitNum">
+        <div display="table">
+            <input type="range" min="0" max="628.3" value="10" class="slider" id="angle"><p>Angle</p>
+            <input type="range" min="0" max="628.3" value="10" class="slider" id="angleOffset"><p>Angle Offset</p>
+            <input type="range" min="0" max="1000" value="400" class="slider" id="lengthFraction"><p>Length Fraction</p>
+            <input type="range" min="0" max="10" value="4" class="slider" id="splitNum"><p>Split Number</p>
+        </div>
         <canvas id="canvas" width=260px height=200px></canvas>
         <script src="javascript/main.js"></script> 
     </body> 
